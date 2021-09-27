@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  bootifulmusic-app:
+    build: ../../..
+    container_name: bootifulmusic-app
+    environment:
+    ports:
+      - 8080:8080

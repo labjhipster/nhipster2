@@ -1,0 +1,57 @@
+{
+  "generator-jhipster": {
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "clientFramework": "angularX",
+    "serverPort": "8080",
+    "serviceDiscoveryType": false,
+    "skipUserManagement": false,
+    "withAdminUi": true,
+    "baseName": "bootifulmusic",
+    "buildTool": "maven",
+    "databaseType": "sql",
+    "devDatabaseType": "sqlite",
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": ["en"],
+    "messageBroker": false,
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "skipClient": false,
+    "testFrameworks": ["protractor"],
+    "websocket": false,
+    "applicationType": "monolith",
+    "packageName": "com.jhipster.node",
+    "packageFolder": "com/jhipster/demo/bootifulmusic",
+    "jhipsterVersion": "7.0.1",
+    "skipServer": false,
+    "clientPackageManager": "npm",
+    "dtoSuffix": "DTO",
+    "entitySuffix": "",
+    "reactive": false,
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "entities": ["Artist", "Genre", "Track", "Album"],
+    "skipCheckLengthOfIdentifier": false,
+    "skipFakeData": false,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-nodejs",
+        "version": "2.0.0"
+      }
+    ],
+    "otherModules": [
+      {
+        "name": "generator-jhipster-nodejs",
+        "version": "2.0.0"
+      }
+    ],
+    "pages": [],
+    "nativeLanguage": "en",
+    "creationTimestamp": 1632733978050,
+    "jwtSecretKey": "YjliOWVmNWYxZTgwMjVkMmEzN2E3YjFkMjRhYjQ4NWQ5OWZjYTViNjI0NGRkOWQ5YWIwMjE3OTQxMjViOTY0ZGM1NTIyNzNlNDRhMDA0NjgwYzU5ZWIwNjJiYTJjODBhY2NiZDNmOTE1NGQyZmFhNWYzY2NlNWFhYzg5OGNjMTU=",
+    "lastLiquibaseTimestamp": 1632734218000
+  }
+}

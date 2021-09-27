@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="album">
+      <h2 data-cy="albumDetailsHeading"><span jhiTranslate="bootifulmusicApp.album.detail.title">Album</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ album.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="bootifulmusicApp.album.name">Name</span></dt>
+        <dd>
+          <span>{{ album.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="bootifulmusicApp.album.artist">Artist</span></dt>
+        <dd>
+          <div *ngIf="album.artist">
+            <a [routerLink]="['/artist', album.artist?.id, 'view']">{{ album.artist?.name }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="bootifulmusicApp.album.genre">Genre</span></dt>
+        <dd>
+          <div *ngIf="album.genre">
+            <a [routerLink]="['/genre', album.genre?.id, 'view']">{{ album.genre?.name }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/album', album.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
+
+import { TrackDetailComponent } from './track-detail.component';
+
+describe('Component Tests', () => {
+  describe('Track Management Detail Component', () => {
+    let comp: TrackDetailComponent;
+    let fixture: ComponentFixture<TrackDetailComponent>;
+
+    beforeEach(() => {
+      TestBed.configureTestingModule({
+        declarations: [TrackDetailComponent],
+        providers: [
+          {
+            provide: ActivatedRoute,
+            useValue: { data: of({ track: { id: 123 } }) },
+          },
+        ],
+      })
+        .overrideTemplate(TrackDetailComponent, '')
+        .compileComponents();
+      fixture = TestBed.createComponent(TrackDetailComponent);
+      comp = fixture.componentInstance;
+    });
+
+    describe('OnInit', () => {
+      it('Should load track on init', () => {
+        // WHEN
+        comp.ngOnInit();
+
+        // THEN
+        expect(comp.track).toEqual(jasmine.objectContaining({ id: 123 }));
+      });
+    });
+  });
+});
